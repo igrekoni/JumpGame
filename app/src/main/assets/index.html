@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doodle jump game</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+  <script type="text/javascript" src="js/point.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/grid.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/ground.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+
+  <script>
+    game.newLoop('game', function() {
+      dt = game.getDT(12);
+
+      game.fill('#8b8b8b');
+      drawGrid();
+
+      drawLevel();
+
+      drawPlayer();
+
+      brush.drawTextS({
+        x:10, y:10,
+        text: 'Score ' + Math.abs(score),
+        size: 200*del,
+        color: '#000',
+        font: 'serif'
+      });
+
+
+    });
+
+
+    game.newLoop('menu', function() {
+      game.fill('#8b8b8b');
+      drawGrid();
+      drawMenu();
+    });
+
+    game.startLoop('menu');
+  </script>
+
+</body>
+</html>
