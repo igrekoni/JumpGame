@@ -1,7 +1,7 @@
 var pl = game.newImageObject({
   x : 10, y : 10,
-  w : 1024 * del, h : 720 * del,
-  file : 'src/knight.png'
+  w : 620 * del, h : 620 * del,
+  file : 'src/pl.png'
 });
 
 var dy = 2 * del;
