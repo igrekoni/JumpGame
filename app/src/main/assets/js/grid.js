@@ -13,3 +13,11 @@ var drawGrid = function() {
     });
   });
 };
+
+var fon = game.newImageObject({
+  x : 0, y : 0,
+  //w : 1024 * del, h : 720 * del,
+  w : width,
+  h : height,
+  file : 'src/bg.jpg'
+});

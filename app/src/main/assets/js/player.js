@@ -51,6 +51,7 @@ var drawPlayer = function () {
   }
 
   camera.moveTimeC(vector.pointPlus(v2d(width/2, pl.getPositionC().y), v2d(0, -500*del)), 10);
+  fon.moveTimeC(vector.pointPlus(v2d(width/2, pl.getPositionC().y), v2d(0, -500*del)), 10);
 
 
 };

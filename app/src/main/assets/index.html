@@ -15,30 +15,28 @@
 
   <script>
     game.newLoop('game', function() {
+
       dt = game.getDT(12);
 
       game.fill('#8b8b8b');
-      drawGrid();
-
+      //drawGrid();
+      fon.draw();
       drawLevel();
-
       drawPlayer();
 
       brush.drawTextS({
         x:10, y:10,
         text: 'Score ' + Math.abs(score),
-        size: 200*del,
+        size: 140*del,
         color: '#000',
         font: 'serif'
       });
-
-
     });
 
 
     game.newLoop('menu', function() {
       game.fill('#8b8b8b');
-      drawGrid();
+      fon.draw();
       drawMenu();
     });
 
